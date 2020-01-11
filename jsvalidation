@@ -1,0 +1,173 @@
+<html>
+ <head >
+ 
+ <h1 align="center">Welcome To Mindtree</h1> 
+<br>
+ <br>
+ <br>
+ <br>
+ 
+ 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ </head>
+ <body>
+     <h2 align="center">
+         Welcome To Possible
+     </h2>
+    <img src="min.jpg"  height="400" width="1200" >
+ 
+ <div style="background: #000;" class="header" >    
+ <center><font color="yellow"><font size=14></font></font></center>
+ </div>
+ <div class="container">
+
+ <p> <a href="#display"> <h3>Link To Headers</h3></a> </p>
+ <p> <a href="#section1"> <h3>Link To Form</h3> </a> </p>
+ </div>
+ <br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br> <br><br> <br><br> <br><br> <br><br> <br><br><br>
+ <div>
+ <section id="display">
+ <h1 class="bg-light">This Is Link To Header</h>
+    <p>One advantage of using the Bootstrap CDN:
+            Many users already have downloaded Bootstrap from MaxCDN when visiting another site. As a result, it will be loaded from cache when they visit your site, which leads to faster loading time. Also, most CDN's will make sure that once a user requests a file from it, it will be served from the server closest to them, which also leads to faster loading time.</p>
+ <img src="">
+ <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">BootStrap</th>
+            <th scope="col">Polo</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+ </section>
+ </div> <br><br> <br><br> <br><br> <br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br> <br><br> <br><br> <br><br>
+
+ <div class="container">
+    <div class="col-lg-8">
+       
+     <form  onsubmit=" return validate()" action="" method="post" class="bg-light">
+        <h1 class="text-align center ">Register Here</h1>
+        <section id=section1>
+        <div class="form-group">
+            
+            User Name<br>
+             <input type="text" name="Name" placeholder="Enter Your Name" id="user" />   
+             <span id="errUser" class="text-danger"></span>
+        </div>
+        <br>
+        <div class="form-group">
+            
+                Mobile Number<br> 
+                 <input type="number" name="Name" placeholder="Enter Your Number" id="num"  value=""/>   
+                 <span id="errNum" class="text-danger"></span>
+            </div>
+           <br>
+        <div class="form-group">
+            <label> User Email</label>
+            <input type="email" name="Email" placeholder="Enter Your Email Id"  id="email"   style="text-align:center" />
+            <span id="errEmail"></span>
+        </div>
+        <br>
+        <div class="form-group">
+                <label> Password </label>
+                <input type="text" name="Email" placeholder="Enter Your Password Here"  id="pass"   style="text-align:center" />
+            </div> 
+            <br>
+            <div class="form-group">
+                    <label> Confirm Password</label>
+                    <input type="text" name="Confirm Email" placeholder="Enter Your Password Again"  id="conpass"   style="text-align:center" />
+                </div>
+        <br>
+        
+        <br>
+        <input type="submit" value="submit" name="Submit" class="btn btn-success">
+
+    </form>
+    </form>
+    <button id="btn">Click Me!</button>
+
+<p id="demo"></p>
+    
+</div>
+</div>
+
+
+<script type="text/javascript">
+    function validate()
+    {
+        var username=document.getElementById("user").value;
+        var email=document.getElementById("email").value
+        var number=document.getElementById("num").value;
+        var password=document.getElementById("pass").value;
+        var conpass=document.getElementById("conpass").value;
+        if((username.length <=2) || (username.length >20))
+        {
+           // document.getElementById('user').innerHTML="Please fill the name of length 2";
+            alert ("Please fill the name of length greater than  2");
+            return false;
+        }
+        if(!isNaN(username))
+        {
+           alert("Number not allowed");
+           return false;
+        }
+        if((username.value=="")|| (number.value=="")|| (email.value=="")||(number.value=""||(conpass.value="")))
+        {
+            alert ("Blank Submission Not Allowed ");
+            return false;
+        }
+       if(number.length!=10)
+       {
+           alert ("Mobile number not of length 10");
+           return false;
+       }
+       if(number.charAt(0)==0)
+       {
+           alert ("Mobile number must start with non zero number");
+           return false;
+       }
+    }
+    var hello;
+
+hello = () => {
+  document.getElementById("demo").innerHTML += this;
+}
+
+//The window object calls the function:
+window.addEventListener("load", hello);
+
+//A button object calls the function:
+document.getElementById("btn").addEventListener("click", hello);
+    
+
+</script>
+    </body>
+</html>
